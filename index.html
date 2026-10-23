@@ -436,6 +436,11 @@ nav a.pl:hover{color:#BA0517}
 .fs i{flex:0 0 24px;height:24px;border-radius:50%;background:#fff;color:var(--c);font-style:normal;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
 .fa{display:flex;align-items:center;color:#fff;font-size:18px}
 @media(max-width:900px){.fa{display:none}}
+
+.card.wide{grid-column:1/-1;display:flex;align-items:center;gap:22px;--k:#BA0517;background:color-mix(in srgb,#BA0517 6%,#fff);border-color:color-mix(in srgb,#BA0517 40%,#fff)}
+.card.wide .e{margin:0;flex:0 0 auto}.card.wide .wb{flex:1}.card.wide h3{margin-bottom:4px}
+.card.wide .btn.p{background:#BA0517;border-color:#BA0517;flex:0 0 auto}.card.wide .btn.p:hover{background:#8f0412;border-color:#8f0412}
+@media(max-width:760px){.card.wide{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -523,6 +528,7 @@ nav a.pl:hover{color:#BA0517}
   <div class="card reveal"><div class="e" data-ic="shield"></div><h3>Responsible by design</h3><p>Consent and responsible-gaming choices flow through every message and offer, not bolted on after.</p></div>
   <div class="card reveal"><div class="e" data-ic="bolt"></div><h3>Right moment, real time</h3><p>Act on player activity as it happens, and launch new promotions without waiting on custom development.</p></div>
   <div class="card reveal"><div class="e" data-ic="trend"></div><h3>Loyalty that proves its value</h3><p>Personalization that builds trust and lifetime value, measured against a control group.</p></div>
+  <div class="card wide reveal"><div class="e" data-ic="layers"></div><div class="wb"><h3>One connected data platform, built to grow</h3><p>Connect your separate systems once, and the same trusted context powers loyalty today and your website, contact center, retailers and AI agents tomorrow. Loyalty is just the beginning.</p></div><button type="button" class="btn p" id="whyPlat">Explore the platform</button></div>
  </div>
 </div></section>
 
@@ -822,6 +828,7 @@ function closePersona(){pm.classList.remove('open');pm.setAttribute('aria-hidden
 $('#px').onclick=closePersona;$('#pback').onclick=closePersona;$('#pclose').onclick=closePersona;
 document.addEventListener('keydown',e=>{if(pm.classList.contains('open')&&e.key==='Escape')closePersona()});
 $$('.tour').forEach(t=>t.onclick=()=>openPersona(t.dataset.p));
+{const wp=$('#whyPlat');if(wp)wp.onclick=()=>openPersona('platform')}
 $$('nav a[data-p]').forEach(a=>a.onclick=e=>{e.preventDefault();openPersona(a.dataset.p)});
 /* ---- draw ---- */
 const dBtn=$('#drawBtn'),hintEl=$('#drawHint');
