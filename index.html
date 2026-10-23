@@ -383,13 +383,66 @@ footer{background:var(--slds-r-color-brand-10)}
 .vpanel h4{font-size:var(--slds-g-font-scale-4);margin:4px 0 8px;color:#fff}
 .vpanel p{color:#fff;font-size:var(--slds-g-font-scale-2);line-height:1.55}
 .vpanel a{display:inline-block;margin-top:12px;font-size:13px;color:#d6e6ff}
+
+/* platform tour */
+.tour.wide{grid-column:1/-1;flex-direction:row}
+.tour.wide .cov{width:220px;height:auto;min-height:150px;flex:0 0 auto}
+.tour.wide .bd{justify-content:center;padding:20px 24px}
+nav a.pl:hover{color:#BA0517}
+#platform .phead .avatar{font-size:46px}
+.arch{display:grid;grid-template-columns:1fr 34px 1.25fr 34px 1fr;gap:10px;align-items:stretch;margin-top:18px}
+.ac{display:flex;flex-direction:column;gap:8px;padding:16px;border:1px solid var(--slds-g-color-border-1);border-radius:var(--slds-g-radius-border-3);background:#fff}
+.ac small{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--slds-g-color-on-surface-1)}
+.chip{display:block;padding:8px 12px;border-radius:var(--slds-g-radius-border-1);background:var(--slds-g-color-surface-2);border:1px solid var(--slds-g-color-border-1);font-size:14px;font-weight:500;color:var(--slds-g-color-on-surface-2)}
+.chip.on{background:color-mix(in srgb,var(--c) 10%,#fff);border-color:color-mix(in srgb,var(--c) 45%,#fff);color:var(--slds-g-color-on-surface-3);font-weight:600}
+.aa{display:flex;align-items:center;justify-content:center;color:var(--c);font-size:26px}.aa .ic{stroke-width:2.4}
+.ac.hub{background:var(--c);border-color:var(--c);color:#fff}.hub small{color:#ffe3e5}.hub b{font-size:20px;line-height:1.2;color:#fff}
+.hub .step{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:var(--slds-g-radius-border-pill);background:#ffffff26;border:1px solid #ffffff66;font-weight:600;color:#fff}
+.hub .step i{width:22px;height:22px;border-radius:50%;background:#fff;color:var(--c);font-style:normal;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.hub em{font-style:normal;font-size:13px;color:#fff;margin-top:auto;padding-top:6px;line-height:1.4}
+.hz{display:grid;grid-template-columns:200px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--slds-g-color-border-1)}
+.hb{display:inline-block;padding:4px 14px;border-radius:var(--slds-g-radius-border-pill);background:var(--c);color:#fff;font-weight:700;font-size:13px;margin-bottom:6px}
+.hh p{font-size:14px;color:var(--slds-g-color-on-surface-1)}
+.hg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.vt{display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid var(--slds-g-color-border-1);border-radius:var(--slds-g-radius-border-2);background:#fff}
+.vt .e{width:38px;height:38px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--c);background:color-mix(in srgb,var(--c) 12%,#fff)}
+.vt b{display:block;color:var(--slds-g-color-on-surface-3);margin-bottom:2px}.vt p{font-size:14px;color:var(--slds-g-color-on-surface-1);line-height:1.45}
+@media(max-width:900px){.arch{grid-template-columns:1fr}.aa{transform:rotate(90deg);height:26px}.hz{grid-template-columns:1fr}.tour.wide .cov{width:116px}}
+
+/* who / how buckets */
+.grp{margin-top:26px}.grp+.grp{margin-top:34px;padding-top:26px;border-top:1px dashed var(--slds-g-color-border-1);position:relative}
+.grp+.grp:before{content:"";position:absolute;left:50%;top:-6px;width:11px;height:11px;margin-left:-5px;background:var(--slds-g-color-surface-2);border-right:1px dashed var(--slds-g-color-border-1);border-bottom:1px dashed var(--slds-g-color-border-1);transform:rotate(45deg)}
+.gh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.gb{display:inline-flex;align-items:center;justify-content:center;min-width:64px;padding:6px 16px;border-radius:var(--slds-g-radius-border-pill);background:var(--slds-g-color-accent-2);color:#fff;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase}
+.how .gb{background:#BA0517}
+.gt{display:flex;flex-direction:column;font-weight:700;font-size:var(--slds-g-font-scale-3);color:var(--slds-g-color-on-surface-3);line-height:1.2}
+.gt small{font-size:13px;font-weight:500;color:var(--slds-g-color-on-surface-1);margin-top:2px}
+.grp .tours{margin-top:0}.tours.one{grid-template-columns:1fr}
+
+/* persona color consistency (incl. platform) */
+#platform{--c:#BA0517;--cb:#BA0517}
+.tb:not(.back){background:var(--cb);border-color:var(--cb)}
+.tb:not(.back):hover:not(:disabled){background:color-mix(in srgb,var(--cb) 82%,#000);border-color:color-mix(in srgb,var(--cb) 82%,#000)}
+.tb.back{color:var(--cb);border-color:var(--cb)}
+.tb.back:hover:not(:disabled){background:color-mix(in srgb,var(--cb) 10%,#fff)}
+
+/* trusted context + flywheel */
+.ctx{display:flex;gap:14px;align-items:flex-start;margin-top:14px;padding:16px 18px;border-radius:var(--slds-g-radius-border-3);background:color-mix(in srgb,var(--c) 8%,#fff);border:1px solid color-mix(in srgb,var(--c) 40%,#fff)}
+.ctx .e{width:40px;height:40px;border-radius:50%;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;flex:0 0 auto}
+.ctx b{display:block;color:var(--slds-g-color-on-surface-3);margin-bottom:2px}.ctx p{font-size:15px;color:var(--slds-g-color-on-surface-2);line-height:1.5}
+.fly{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap;margin-top:22px;padding:16px;border-radius:var(--slds-g-radius-border-3);background:var(--c);color:#fff}
+.fh{flex:0 0 100%;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ffe3e5}
+.fs{flex:1 1 150px;display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:var(--slds-g-radius-border-2);background:#ffffff26;border:1px solid #ffffff66;font-weight:600;font-size:14px;line-height:1.3;color:#fff}
+.fs i{flex:0 0 24px;height:24px;border-radius:50%;background:#fff;color:var(--c);font-style:normal;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.fa{display:flex;align-items:center;color:#fff;font-size:18px}
+@media(max-width:900px){.fa{display:none}}
 </style>
 </head>
 <body>
 <header><div class="wrap bar">
  <div class="logo"><img src="salesforce-logo.png" alt="Salesforce" onerror="this.outerHTML='<span class=&quot;fb&quot;>Salesforce</span>'"></div><div class="vr"></div>
  <div class="logo"><img src="klc-logo.png" alt="Kentucky Lottery" onerror="this.outerHTML='<span class=&quot;fb k&quot;>Kentucky Lottery</span>'"></div>
- <nav><a href="#draw">The Draw</a><a class="a" href="#draw" data-p="alex">Player</a><a class="j" href="#draw" data-p="jamie">Service</a><a class="t" href="#draw" data-p="taylor">Analytics</a><a href="#why">Why it matters</a><a href="#commit">Commitments</a><a href="#faq">FAQ</a></nav>
+ <nav><a href="#draw">The Draw</a><a class="a" href="#draw" data-p="alex">Player</a><a class="j" href="#draw" data-p="jamie">Service</a><a class="t" href="#draw" data-p="taylor">Analytics</a><a class="pl" href="#draw" data-p="platform">Platform</a><a href="#why">Why it matters</a><a href="#commit">Commitments</a><a href="#faq">FAQ</a></nav>
 </div></header>
 
 <div class="promo" id="promo">
@@ -446,13 +499,18 @@ footer{background:var(--slds-r-color-brand-10)}
  </div>
  <div class="dright">
   <span class="kicker reveal">Guided tours</span>
-  <h2 class="reveal">Who shows up on <span style="color:var(--sf)">your</span> program?</h2>
-  <p class="lead reveal">Draw a ball to meet a player, or jump straight into any tour. Each story opens in its own window.</p>
-  <div class="tours reveal">
+  <h2 class="reveal">Who it serves, and <span style="color:var(--sf)">how</span> it works.</h2>
+  <p class="lead reveal">Draw a ball to meet a player, or jump straight into any tour. Then see the connected data platform that makes every story possible. Each tour opens in its own window.</p>
+  <div class="grp reveal"><div class="gh"><span class="gb">Who</span><span class="gt">The people it serves<small>Draw a ball or pick a card</small></span></div>
+  <div class="tours">
    <button class="tour" data-p="alex" style="--c:#0176D3;--cb:#1570EF"><span class="cov"><span class="orb">A</span><span class="ct" data-ic="phone"></span></span><span class="bd"><span class="role">Player</span><span class="nm">Alex Carter</span><span class="ds">From a first personalized offer to an engaged member, in six moments.</span><span class="go">Start tour <span data-ic="arrowR"></span></span></span></button>
    <button class="tour" data-p="jamie" style="--c:#7F56D9;--cb:#7A45F0"><span class="cov"><span class="orb">J</span><span class="ct" data-ic="sliders"></span></span><span class="bd"><span class="role">Business Owner</span><span class="nm">Jamie Reynolds</span><span class="ds">Turn a campaign idea into a coordinated, consent-aware player experience.</span><span class="go">Start tour <span data-ic="arrowR"></span></span></span></button>
    <button class="tour" data-p="taylor" style="--c:#04844B;--cb:#0A8F63"><span class="cov"><span class="orb">T</span><span class="ct" data-ic="chart"></span></span><span class="bd"><span class="role">Program Leader</span><span class="nm">Taylor Morgan</span><span class="ds">See what is working and prove the value with true lift.</span><span class="go">Start tour <span data-ic="arrowR"></span></span></span></button>
-  </div>
+  </div></div>
+  <div class="grp how reveal"><div class="gh"><span class="gb">How</span><span class="gt">The platform that makes it possible<small>No draw needed. Open it any time</small></span></div>
+  <div class="tours one">
+   <button class="tour wide" data-p="platform" style="--c:#BA0517;--cb:#BA0517"><span class="cov"><span class="orb" data-ic="layers"></span><span class="ct" data-ic="database"></span></span><span class="bd"><span class="role">How it works</span><span class="nm">The connected data platform</span><span class="ds">See how connecting your siloed systems powers everything you just saw, and what else it turns on next: voice, portal, reporting, agents and predictive insight.</span><span class="go">Start tour <span data-ic="arrowR"></span></span></span></button>
+  </div></div>
  </div>
 </div></section>
 
@@ -549,6 +607,12 @@ const IC={
  ticket:'<path d="M3 8a2 2 0 002-2h14a2 2 0 002 2v2a2 2 0 000 4v2a2 2 0 00-2 2H5a2 2 0 00-2-2v-2a2 2 0 000-4z"/><path d="M14 6v12" stroke-dasharray="2 2"/>',
  pumpkin:'<path d="M12 7c-5 0-9 2.6-9 6.5S7 20 12 20s9-2.6 9-6.5S17 7 12 7z"/><path d="M12 7c-2.2 0-3.4 2.6-3.4 6.5S9.8 20 12 20M12 7c2.2 0 3.4 2.6 3.4 6.5S14.2 20 12 20"/><path d="M12 7V4c1 0 2.2-.3 3-1"/>',
  trophy:'<path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0zM17 5h3v2a3 3 0 01-3 3M7 5H4v2a3 3 0 003 3"/>',
+ layers:'<path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5L12 21l9-4.5"/>',
+ mic:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/>',
+ monitor:'<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>',
+ bot:'<rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h0M15 13h0M9 16h6"/>',
+ link:'<path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/>',
+ database:'<ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
  info:'<circle cx="12" cy="12" r="10"/><path d="M12 16v-5M12 8h0"/>',
  arrowL:'<path d="M19 12H5M11 6l-6 6 6 6"/>',arrowR:'<path d="M5 12h14M13 6l6 6-6 6"/>',arrowU:'<path d="M12 19V5M6 11l6-6 6 6"/>'
 };
@@ -584,14 +648,25 @@ const P={
    ['flask','Measure incremental impact','Test and control groups help quantify true behavioral lift.','The honest answer to "are we just giving away incentives?"',['Test and control','Measured incremental lift']],
    ['search','Identify what works','Taylor identifies high-performing audiences, offers, channels and experiences.','Scale what moves behavior, retire what does not.',['Insights by audience, offer and channel']],
    ['compass','Optimize what\'s next','Insights guide the next campaign, offer, audience and loyalty experience.','Human-approved optimization, informed by data.',['Insights that guide the next move']]]}
+
+ ,platform:{init:'__ICON__',name:'The connected data platform',role:'The foundation underneath your program',tag:'How it works',who:"KLC's",jt:'The platform journey',cta:'Explore the platform',
+  blurb:'One trusted foundation that connects data from every system, so your website, app, retail network and contact center all work from the same trusted context.',
+  minds:['Our player data lives in separate systems, and retail tickets are anonymous. Can we finally see one player, online and in store?','Can we keep our own website and app and simply make them smarter, without rebuilding what already works?','Can I trust it? Consent, responsible gaming rules and an audit trail have to be built in, not bolted on.','Loyalty is the start. What else could this foundation turn on across the whole enterprise, and for the students we fund?'],
+  steps:[['link','Connect the silos','Digital play, retail ticket data, existing player accounts, marketing history, contact center and retailer support connect where they live, with no rebuilding or risky data moves for regulated gaming systems.','Start from the systems you have, not a rip-and-replace.',['Connected data','Open integration','No data re-platforming']],
+   ['users','Harmonize into one player profile','An anonymous retail ticket scan can be matched to a known digital player, so offline and online finally add up to one unified player profile.','One recognized player, in store and online, with no duplicate records.',['Unified player profile','Harmonized data','Retail and digital together']],
+   ['shield','Govern with trust','Consent, player preferences and responsible gaming rules travel with the data. A spike in spend can pause promotions and surface support resources automatically.','Trust and responsible gaming are built into the foundation, with a trail you can audit.',['Player preferences','Responsible gaming rules','Auditable']],
+   ['bolt','Activate in real time','The same profile personalizes your website and app, triggers a relevant digital offer after a retail scan, and brings back a player who left a purchase unfinished. Your own interface stays; the intelligence sits behind it.','Everything Alex and Jamie experienced runs on this one foundation.',['Real-time personalization','Headless, bring your own experience','Multi-channel journeys']],
+   ['trend','Predict and optimize','Real-time insight shows which retail areas are cooling, when a game is losing momentum, where jackpot interest turns into buying, and flags unusual account activity.','Move from reporting what happened to guiding what happens next.',['Predictive analytics','Real-time actionable insight','Integrity monitoring']],
+   ['compass','Think bigger','Website, contact center, retailer support and public-good programs all draw on the same trusted context. Loyalty is just the beginning.','Invest once, then keep turning on new value across the enterprise.',['Trusted context','Reusable foundation','Faster time to value']]]}
 };
+P.platform.init=icon('layers');
 function buildPersona(id){
  const p=P[id];
  const sec=document.createElement('section');sec.className='persona pview';sec.id=id;
  sec.innerHTML=`<div class="wrap">
   <div class="phead"><div class="avatar">${p.init}</div><div><span class="pill">${p.tag}</span><h2 style="margin:0">${p.name}</h2><p class="lead">${p.role}. ${p.blurb}</p></div></div>
-  <details class="mw" open><summary><span class="mav">${p.init}</span><span><small>In their own words</small>What's on ${p.name.split(' ')[0]}'s mind</span></summary><div class="minds">${p.minds.map(m=>`<blockquote class="mind"><span class="qm">&ldquo;</span>${m}</blockquote>`).join('')}</div></details>
-  <div class="ticket"><div class="thead">${p.name.split(' ')[0]}'s journey</div>
+  <details class="mw" open><summary><span class="mav">${p.init}</span><span><small>In their own words</small>What's on ${p.who||p.name.split(' ')[0]+'\'s'} mind</span></summary><div class="minds">${p.minds.map(m=>`<blockquote class="mind"><span class="qm">&ldquo;</span>${m}</blockquote>`).join('')}</div></details>
+  <div class="ticket"><div class="thead">${p.jt||p.name.split(' ')[0]+'\'s journey'}</div>
    <div class="steps">${p.steps.map((s,i)=>`<button class="sp" data-i="${i}">${i+1}. ${s[1]}</button>`).join('')}</div>
    <div class="sbody"><div class="icon"></div><div><h3></h3><p></p><div class="why"><span>Why it matters</span><div></div></div></div></div>
    <div class="caps"></div>
@@ -613,7 +688,7 @@ function buildPersona(id){
  $('#'+id+' .prev').onclick=()=>show(cur-1);$('#'+id+' .next').onclick=()=>show(cur+1);
  show(0);
 }
-['alex','jamie','taylor'].forEach(buildPersona);
+['alex','jamie','taylor','platform'].forEach(buildPersona);
 function confetti(){const c=['#22D3EE','#2D9CFF','#FFC53D','#FF3B5C','#16D18A','#9B7BFF'];for(let i=0;i<36;i++){const d=document.createElement('div');d.className='conf';const col=c[i%6];d.style.left=Math.random()*100+'vw';d.style.background=col;d.style.color=col;d.style.animationDuration=(2+Math.random()*2.2)+'s';d.style.animationDelay=Math.random()*.4+'s';document.body.appendChild(d);setTimeout(()=>d.remove(),5200)}}
 /* ---- Play &amp; Earn Challenge: value-prop walkthrough pop-up ---- */
 (function(){
@@ -661,6 +736,48 @@ function confetti(){const c=['#22D3EE','#2D9CFF','#FFC53D','#FF3B5C','#16D18A','
  el.innerHTML=`<span class="pill">See it</span><h4>New-player performance</h4><div class="kpis"><div class="kpi"><b data-to="12450">0</b><small>New enrollments</small></div><div class="kpi"><b data-to="85" data-s="%">0</b><small>Opted in to marketing</small></div><div class="kpi"><b data-to="68" data-s="%">0</b><small>Used $10 Bonus Cash</small></div></div>
  <h4 style="margin-top:30px">Test vs. control</h4><div class="tc" id="tc"><div><i style="background:#9AA9BD" data-h="110"></i>Control<br>22%</div><div><i style="background:linear-gradient(180deg,#16D18A,#04844B)" data-h="158"></i>Treatment<br>31%</div></div><p class="lift">+9 pt lift</p><p class="note" style="text-align:center">Illustrative numbers.</p>`;
 })();
+
+/* ---- Platform: architecture + bigger vision ---- */
+(function(){
+ const el=$('#platform-panel');if(!el)return;
+ const T=(ic,t,d)=>`<div class="vt"><span class="e">${icon(ic)}</span><div><b>${t}</b><p>${d}</p></div></div>`;
+ const H=(b,p,tiles)=>`<div class="hz"><div class="hh"><span class="hb">${b}</span><p>${p}</p></div><div class="hg">${tiles.map(t=>T(...t)).join('')}</div></div>`;
+ el.innerHTML=`<span class="pill">See it</span><h4>One connected foundation</h4>
+ <p class="lead">Today player data sits in separate systems, and a retail ticket is anonymous. Connected and harmonized, one foundation serves every team and every channel, without replacing the regulated systems that already run the business.</p>
+ <div class="arch">
+  <div class="ac"><small>Your sources</small>${['Digital play and instant games','Retail terminals and ticket scans','Existing player accounts','Marketing and messaging history','Contact center and retailer support','Partner and third-party data'].map(x=>`<span class="chip">${x}</span>`).join('')}</div>
+  <div class="aa" aria-hidden="true">${icon('arrowR')}</div>
+  <div class="ac hub"><small>The foundation</small><b>The connected data platform</b>${['Connect','Harmonize','Govern','Activate'].map((x,i)=>`<span class="step"><i>${i+1}</i>${x}</span>`).join('')}<em>Unified player profile · Consent and preferences · Responsible gaming rules</em></div>
+  <div class="aa" aria-hidden="true">${icon('arrowR')}</div>
+  <div class="ac"><small>What it powers</small>${['Loyalty and rewards','Website and mobile app','Contact center and retailer support','Real-time insight and AI agents'].map(x=>`<span class="chip on">${x}</span>`).join('')}</div>
+ </div>
+ <div class="ctx"><span class="e">${icon('layers')}</span><div><b>Trusted context, behind any experience</b><p>Keep the website, app and tools your teams and players already know. The connected data platform supplies the intelligence behind them, so every interaction starts from the same trusted view of the player.</p></div></div>
+ <h4 style="margin-top:34px">Loyalty is just the beginning</h4>
+ <p class="lead">Invest in the foundation once, then keep turning on new value across the enterprise. A possible path:</p>
+ ${H('Day one','The loyalty and player experience you just toured, on one trusted profile.',[
+  ['layers','Loyalty and journeys','Enrollment, rewards and coordinated communications.'],
+  ['send','Retail meets digital','Scan a ticket in store and a relevant digital offer follows, in the moment.'],
+  ['shield','Responsible gaming signals','Spending that spikes pauses promotions and surfaces support, automatically.'],
+  ['chart','Unified reporting','One performance view across programs, channels and retailers.']])}
+ ${H('Next','New front doors that recognize the same player, and the same retailer.',[
+  ['monitor','Website and app, personalized','The home page adapts to how each player likes to play. Keep your own look and feel.'],
+  ['repeat','Finish what they started','A gentle nudge brings back a player who left a purchase unfinished before a drawing closes.'],
+  ['mic','Voice and contact center','Callers are recognized and helped with full context, in fewer steps.'],
+  ['bot','AI agents','Governed assistants resolve account and rewards questions instantly, with people in control.'],
+  ['database','Retailer service desk','Sales, terminal health and open requests for a store on a single screen.']])}
+ ${H('Beyond','Anticipate what is next, and grow engagement responsibly.',[
+  ['trend','Retail early warning','Spot a cooling area or retailer before it affects sales, and respond fast.'],
+  ['flask','Game lifecycle insight','See when a game is losing momentum and when to launch the next.'],
+  ['target','Jackpot demand signals','Understand where interest turns into buying, and time outreach to match.'],
+  ['search','Integrity monitoring','Flag unusual account or scan activity in real time to protect players and the brand.']])}
+ ${H('For the public good','Tie the technology to the mission of funding Kentucky students.',[
+  ['gift','Points for public good','Let players put rewards or a round-up toward education, if the program chooses.'],
+  ['link','Local partnerships','Consent-based offers with Kentucky businesses and community organizations that bring players, and revenue, to local doors.'],
+  ['award','Show the impact','Tell players, in their own area, what their play helped fund. Build trust and pride.'],
+  ['compass','Open to possibilities','A foundation that stays open to whatever Kentucky Lottery wants to do next.']])}
+ <div class="fly"><span class="fh">The flywheel</span>${['Unify digital, retail and web activity','Predict trends and personalize every experience','Protect and retain players with frictionless service','Grow revenue that funds Kentucky students'].map((x,i)=>`<span class="fs"><i>${i+1}</i>${x}</span>`).join('<span class="fa">'+icon('arrowR')+'</span>')}</div>
+ <p class="note">Illustrative vision for discussion. Not a commitment, a product demonstration or a statement of scope.</p>`;
+})();
 /* ---- reveal + counters ---- */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');
  $$('b[data-to]',e.target).forEach(b=>{if(b.dataset.done)return;b.dataset.done=1;const to=+b.dataset.to,s=b.dataset.s||'',t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/1400);b.textContent=Math.round(to*(1-Math.pow(1-p,3))).toLocaleString()+s;if(p<1)requestAnimationFrame(f)})(t0)});
@@ -683,8 +800,8 @@ function globe(){const cv=$('#gl');const g=cv.getContext('2d');const W=340,R=W/2
   raf=requestAnimationFrame(tick)})()}
 globe();
 /* ---- persona pop-up windows ---- */
-const PCOL={alex:['#0176D3','#1570EF'],jamie:['#7F56D9','#7A45F0'],taylor:['#04844B','#0A8F63']};
-const ORDER=['alex','jamie','taylor'];
+const PCOL={alex:['#0176D3','#1570EF'],jamie:['#7F56D9','#7A45F0'],taylor:['#04844B','#0A8F63'],platform:['#BA0517','#BA0517']};
+const ORDER=['alex','jamie','taylor','platform'];
 function activate(root){
  $$('b[data-to]',root).forEach(b=>{const to=+b.dataset.to,s=b.dataset.s||'',t0=performance.now();b.textContent='0'+s;(function f(t){const p=Math.min(1,(t-t0)/1400);b.textContent=Math.round(to*(1-Math.pow(1-p,3))).toLocaleString()+s;if(p<1)requestAnimationFrame(f)})(t0)});
  $$('i[data-h]',root).forEach(i=>{i.style.height='0px';setTimeout(()=>i.style.height=i.dataset.h+'px',80)});
@@ -696,7 +813,7 @@ function openPersona(id){
  $$('.pview').forEach(v=>v.classList.toggle('on',v.id===id));const tc=$('.tour[data-p="'+id+'"]');if(tc)tc.classList.add('seen');
  pm.style.setProperty('--c',PCOL[id][0]);pm.style.setProperty('--cb',PCOL[id][1]);
  const nx=ORDER[i+1];const btn=$('#pnext');
- btn.innerHTML=nx?`Meet ${P[nx].name.split(' ')[0]} ${icon('arrowR')}`:'See why it matters';
+ btn.innerHTML=nx?(P[nx].cta||`Meet ${P[nx].name.split(' ')[0]}`)+' '+icon('arrowR'):'See why it matters';
  btn.onclick=()=>{if(nx)openPersona(nx);else{closePersona();$('#why').scrollIntoView()}};
  pm.classList.add('open');pm.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
  $('#pcard').scrollTop=0;activate($('#'+id));setTimeout(()=>$('#px').focus(),50);
